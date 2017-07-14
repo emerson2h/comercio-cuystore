@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a05c495451d44ca28de790753f95c029" Name="Diagram1">
+        <EntityTypeShape EntityType="StoreModel.Categoria" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.Cliente" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.CuentaUsuario" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.Direccion" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.Distrito" Width="1.5" PointX="3.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.Pedido" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.PedidoDetalle" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.Producto" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.ProductoImagen" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="StoreModel.Proveedor" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="StoreModel.FK__Producto__Catego__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreModel.FK__CuentaUsu__Clien__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreModel.FK__Direccion__Clien__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreModel.FK__Pedido__ClienteI__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreModel.FK__Direccion__Distr__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreModel.FK__PedidoDet__Pedid__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreModel.FK__PedidoDet__Produ__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreModel.FK__Producto__Provee__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="StoreModel.FK__ProductoI__Produ__1CF15040" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
