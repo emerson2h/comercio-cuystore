@@ -165,6 +165,7 @@
     <Content Include="images\shop\product7.jpg" />
     <Content Include="images\shop\product8.jpg" />
     <Content Include="images\shop\product9.jpg" />
+    <Content Include="ImgProductos\logito.png" />
     <Content Include="ImgProductos\no_disponible.jpg" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\contact.js" />
@@ -288,6 +289,8 @@
     <Content Include="Areas\admin\Views\Producto\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Views\Home\Contacto.cshtml" />
+    <Content Include="Views\Home\Nosotros.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

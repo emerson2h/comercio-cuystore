@@ -23,5 +23,15 @@ namespace CuyStore.Controllers
             ViewBag.clave = id;
             return View(productos);
         }
+
+        public ActionResult Contacto()
+        {
+            return View();
+        }
+
+        public ActionResult Nosotros()
+        {
+            return View();
+        }
     }
 }

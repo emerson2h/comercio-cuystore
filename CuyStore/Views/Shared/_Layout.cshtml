@@ -60,31 +60,9 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="logo pull-left">
-                            <a href="index.html"><img src="~/images/home/logo.png" alt="" /></a>
+                            <a href="~/Home"><img src="~/ImgProductos/logito.png" alt="" /></a>
                         </div>
-                        <div class="btn-group pull-right">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    Peru
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Peru</a></li>
-                                    <li><a href="#">UK</a></li>
-                                </ul>
-                            </div>
-
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
-                                    SOLES
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Soles</a></li>
-                                    <li><a href="#">Puntos</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
@@ -116,11 +94,12 @@
                         </div>
                         <div class="mainmenu pull-left">
                             <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="index.html" class="active">Home</a></li>
+                                <li><a href="~/Home" >Home</a></li>
+                                <li><a href="~/Home/Nosotros">Nosotros</a></li>
                                 <li class="dropdown">
-                                    <a href="#">PRODUCTO<i class="fa fa-angle-down"></i></a>
+                                    <a href="#">Productos<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="shop.html">Produtos</a></li>
+                                        <li><a href="~/Home/Buscar">Productos</a></li>
                                         <li><a href="product-details.html">Detalle Producto</a></li>
                                         <li><a href="checkout.html">Registrarse</a></li>
                                         <li><a href="cart.html">Carrito</a></li>
@@ -135,7 +114,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="404.html">404</a></li>
-                                <li><a href="contact-us.html">Contacto</a></li>
+                                <li><a href="~/Home/Contacto">Contacto</a></li>
                             </ul>
 
                             <!--== search form-->
@@ -145,12 +124,15 @@
                     <div class="col-sm-3">
                         <form class="navbar-form pull-right" action="@Url.Action("Buscar","Home")" method="get">
                             <input type="text" class="searchform" name="id" id="navSearchInput" placeholder="   Buscar   " />
-                            
+
                         </form>
                     </div>
+                                                 
                     
                 </div>
+                
             </div>
+           
         </div><!--/header-bottom-->
     </header><!--/header-->
 
