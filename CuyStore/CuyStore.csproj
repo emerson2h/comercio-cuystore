@@ -173,6 +173,7 @@
     <Content Include="js\html5shiv.js" />
     <Content Include="js\jquery.form.min.js" />
     <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="js\jquery.prettyPhoto.js" />
     <Content Include="js\jquery.scrollUp.min.js" />
     <Content Include="js\main.js" />
@@ -214,6 +215,7 @@
     <Compile Include="Areas\admin\Controllers\ProductoController.cs" />
     <Compile Include="Areas\admin\Controllers\ProveedorController.cs" />
     <Compile Include="Areas\admin\Models\ResponseModel.cs" />
+    <Compile Include="Controllers\CompraController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -291,6 +293,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Views\Home\Contacto.cshtml" />
     <Content Include="Views\Home\Nosotros.cshtml" />
+    <Content Include="Views\Compra\Paso1.cshtml" />
+    <Content Include="Views\Compra\Paso2.cshtml" />
+    <Content Include="Views\Compra\Paso3.cshtml" />
+    <Content Include="Views\Compra\Paso4.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
