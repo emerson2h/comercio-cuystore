@@ -1,0 +1,183 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Carrito | CuyStore</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/css/price-range.css" rel="stylesheet">
+    <link href="~/css/animate.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="~/js/html5shiv.js"></script>
+    <script src="~/js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="~/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="~/images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+<body>
+    
+    <section id="cart_items">
+        <h2 class="title text-center">Carrito de Compras</h2>
+        <div class="container">
+            <div class="breadcrumbs">
+                <ol class="breadcrumb">
+                    <li><a href="/Home">Home</a></li>
+                    <li><a href="/Home/buscar">Comprar</a></li>
+                </ol>
+            </div>
+            
+            <div class="table-responsive cart_info">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr class="cart_menu">
+                            <th colspan="2">Item</th>
+                            <th><div class="align-center">Cantidad</div></th>
+                            <th><div class="align-right">Precio</div></th>
+                        </tr>
+                    </thead>
+                    <tbody id="itemcarrito"></tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="stronger">Total:</td>
+                        <td class="stronger"><div id="totalCompra" class="size-16 align-right">0.00</div></td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </section> <!--/#cart_items-->
+    <section id="do_action">
+        <div class="container">
+            <div class="heading">
+                <h3>What would you like to do next?</h3>
+                <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="chose_area">
+                        <ul class="user_option">
+                            <li>
+                                <input type="checkbox">
+                                <label>Use Coupon Code</label>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <label>Use Gift Voucher</label>
+                            </li>
+                            <li>
+                                <input type="checkbox">
+                                <label>Estimate Shipping & Taxes</label>
+                            </li>
+                        </ul>
+                        <ul class="user_info">
+                            <li class="single_field">
+                                <label>Country:</label>
+                                <select>
+                                    <option>United States</option>
+                                    <option>Bangladesh</option>
+                                    <option>UK</option>
+                                    <option>India</option>
+                                    <option>Pakistan</option>
+                                    <option>Ucrane</option>
+                                    <option>Canada</option>
+                                    <option>Dubai</option>
+                                </select>
+
+                            </li>
+                            <li class="single_field">
+                                <label>Region / State:</label>
+                                <select>
+                                    <option>Select</option>
+                                    <option>Dhaka</option>
+                                    <option>London</option>
+                                    <option>Dillih</option>
+                                    <option>Lahore</option>
+                                    <option>Alaska</option>
+                                    <option>Canada</option>
+                                    <option>Dubai</option>
+                                </select>
+
+                            </li>
+                            <li class="single_field zip-field">
+                                <label>Zip Code:</label>
+                                <input type="text">
+                            </li>
+                        </ul>
+                        <a class="btn btn-default update" href="">Get Quotes</a>
+                        <a class="btn btn-default check_out" href="">Continue</a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="total_area">
+                        <ul>
+                            <li>Cart Sub Total <span>$59</span></li>
+                            <li>Eco Tax <span>$2</span></li>
+                            <li>Shipping Cost <span>Free</span></li>
+                            <li>Total <span>$61</span></li>
+                        </ul>
+                        <a class="btn btn-default update" href="">Update</a>
+                        <a class="btn btn-default check_out" href="">Check Out</a>
+                    </div>
+                </div>
+            </div>
+            <p class="right-align">
+                In the next step you will choose your shipping address &nbsp; &nbsp;
+                <a href="@Url.Action("Paso2","Compra")" class="btn btn-primary higher bold">CONTINUAR</a>
+            </p>
+        </div>
+        
+    </section><!--/#do_action-->
+   
+
+
+    <script src="~/js/jquery.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.scrollUp.min.js"></script>
+    <script src="~/js/jquery.prettyPhoto.js"></script>
+    <script src="~/js/main.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var carrito = localStorage.getItem("carrito");
+            var productos = [];
+            if (carrito != null) {
+                productos = JSON.parse(carrito);
+                CargarProductos(productos);
+            }
+        });
+        function CargarProductos(productos) {
+            var html = '';
+            var total = 0;
+
+            $.each(productos, function () {
+                total += this.PrecioUnitario * this.Cantidad
+                html += '<tr>' +
+                '            <td class="image"><img src="/ImgProductos/' + this.Imagen + '" alt="" width="124" height="124" /></td>' +
+                '            <td class="desc">' + this.Denominacion + ' &nbsp; <a title="Remove Item" class="icon-remove-sign" href="#"></a></td>' +
+                '            <td class="qty">' +
+                '                <input type="text" class="tiny-size" value="' + this.Cantidad + '" />' +
+                '           </td>' +
+                '           <td class="price">S/. ' + this.PrecioUnitario + '</td>' +
+                '          </tr>'
+            });
+            $('#itemcarrito').html(html);
+
+            $("#totalCompra").text('S/.' + total);
+        }
+    </script>
+</body>
+</html>
